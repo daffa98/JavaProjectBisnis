@@ -79,6 +79,14 @@ Statement s;
         tsisa.setText((String)tbl_brg.getValueAt(row, 6));
         
     }
+    private void BersihField(){
+        tkd_brg.setText("");
+        tnm_brg.setText("");
+        tdiskon.setText("");
+        thrg_jual.setText("");
+        tjum.setText("");
+        trusak.setText("");
+        tsisa.setText("");
     
     /**
      * This method is called from within the constructor to initialize the form.
