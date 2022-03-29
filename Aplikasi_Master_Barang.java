@@ -68,6 +68,17 @@ Statement s;
                 JOptionPane.showMessageDialog(null, e);
             }
         }
+    private void SetTabel(){
+        int row=tbl_brg.getSelectedRow();
+        tkd_brg.setText((String)tbl_brg.getValueAt(row, 0));
+        tnm_brg.setText((String)tbl_brg.getValueAt(row, 1));
+        tdiskon.setText((String)tbl_brg.getValueAt(row, 2));
+        thrg_jual.setText((String)tbl_brg.getValueAt(row, 3));
+        tjum.setText((String)tbl_brg.getValueAt(row, 4));
+        trusak.setText((String)tbl_brg.getValueAt(row, 5));
+        tsisa.setText((String)tbl_brg.getValueAt(row, 6));
+        
+    }
     
     /**
      * This method is called from within the constructor to initialize the form.
