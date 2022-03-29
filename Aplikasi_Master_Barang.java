@@ -88,10 +88,10 @@ Statement s;
         trusak.setText("");
         tsisa.setText("");
     }
-    private void SimpanData(){
+     private void SimpanData(){
         try {
-            String sql="Insert into barang Values("+tkd_brg.getText()+","+tnm_brg.getText()+","+tdiskon.getText()+","+thrg_jual.getText()+","+tjum.getText()+","+trusak.getText()+","+tsisa.getText()+")";
-            s.executeQuery(sql);
+            String sql="Insert into barang Values('"+tkd_brg.getText()+"','"+tnm_brg.getText()+"','"+tdiskon.getText()+"','"+thrg_jual.getText()+"','"+tjum.getText()+"','"+trusak.getText()+"','"+tsisa.getText()+"')";
+            s.executeUpdate(sql);
             s.close();
             JOptionPane.showMessageDialog(null, "Data Berhasil Ditambah");
             BersihField();
