@@ -87,7 +87,20 @@ Statement s;
         tjum.setText("");
         trusak.setText("");
         tsisa.setText("");
-    
+    }
+    private void SimpanData(){
+        try {
+            String sql="Insert into barang Values("+tkd_brg.getText()+","+tnm_brg.getText()+","+tdiskon.getText()+","+thrg_jual.getText()+","+tjum.getText()+","+trusak.getText()+","+tsisa.getText()+")";
+            s.executeQuery(sql);
+            s.close();
+            JOptionPane.showMessageDialog(null, "Data Berhasil Ditambah");
+            BersihField();
+            BacaTabelBarang();
+            
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
