@@ -88,7 +88,7 @@ Statement s;
         trusak.setText("");
         tsisa.setText("");
     }
-     private void SimpanData(){
+    private void SimpanData(){
         try {
             String sql="Insert into barang Values('"+tkd_brg.getText()+"','"+tnm_brg.getText()+"','"+tdiskon.getText()+"','"+thrg_jual.getText()+"','"+tjum.getText()+"','"+trusak.getText()+"','"+tsisa.getText()+"')";
             s.executeUpdate(sql);
@@ -163,6 +163,11 @@ Statement s;
                 return types [columnIndex];
             }
         });
+        tbl_brg.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbl_brgMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tbl_brg);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -189,12 +194,22 @@ Statement s;
         jLabel11.setText("Harga Jual     Rp.");
 
         bt_tambah.setText("Tambah");
+        bt_tambah.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_tambahActionPerformed(evt);
+            }
+        });
 
         bt_edit.setText("Edit");
 
         bt_hapus.setText("Hapus");
 
         bt_keluar.setText("Keluar");
+        bt_keluar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_keluarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -318,6 +333,21 @@ Statement s;
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void tbl_brgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbl_brgMouseClicked
+        // TODO add your handling code here:
+        SetTabel();
+    }//GEN-LAST:event_tbl_brgMouseClicked
+
+    private void bt_tambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_tambahActionPerformed
+        // TODO add your handling code here:
+        SimpanData();
+    }//GEN-LAST:event_bt_tambahActionPerformed
+
+    private void bt_keluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_keluarActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_bt_keluarActionPerformed
 
     /**
      * @param args the command line arguments
