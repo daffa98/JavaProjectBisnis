@@ -101,6 +101,19 @@ Statement s;
             JOptionPane.showMessageDialog(null, e);
         }
     }
+    private void EditData(){
+        try {
+            String sql ="Update barang set kd_brg='"+tkd_brg.getText()+"',nm_brg='"+tnm_brg.getText()+"',diskon='"+tdiskon.getText()+"',hrg_jual='"+thrg_jual.getText()+"',jumlah='"+tjum.getText()+"',rusak='"+trusak.getText()+"',sisa='"+tsisa.getText()+"' Where kd_brg='"+tkd_brg.getText()+"'";
+       s.executeUpdate(sql);
+            s.close();
+            JOptionPane.showMessageDialog(null, "Data Berhasil Diedit");
+            BersihField();
+            BacaTabelBarang();
+            
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
