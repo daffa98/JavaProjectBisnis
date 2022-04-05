@@ -114,6 +114,19 @@ Statement s;
             JOptionPane.showMessageDialog(null, e);
         }
     }
+    private void HapusData(){
+        try {
+           String sql="Delete from barang Where kd_brg='"+tkd_brg.getText()+"'";
+       s.executeUpdate(sql);
+            s.close();
+            JOptionPane.showMessageDialog(null, "Data Berhasil Di Hapus");
+            BersihField();
+            BacaTabelBarang();
+            
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
