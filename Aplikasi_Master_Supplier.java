@@ -96,13 +96,13 @@ private void SetTabel(){
     }
 private void EditData(){
         try {
-            String sql ="Update supplier set kd_brg='"+tkd_sup.getText()+"',"
-                    + "nm_per='"+tnm_per.getText()+"',"
-                    + "nm_pen='"+tnm_pen.getText()+"',"
-                    + "No_telp='"+tno_telp.getText()+"',"
-                    + "email='"+temail.getText()+"',"
-                    + "alamat='"+talm.getText()+"'," 
-                    + "Where kd_sup='"+tkd_sup.getText()+"'";
+           String sql = "Update supplier Set kd_sup='"+tkd_sup.getText()+"',"
+                   + "nm_per='"+tnm_per.getText()+"',"
+                   + "nm_pen='"+tnm_pen.getText()+"',"
+                   + "No_telp='"+tno_telp.getText()+"',"
+                   + "email='"+temail.getText()+"',"
+                   + "alamat='"+talm.getText()+"' "
+                   + "where kd_sup='"+tkd_sup.getText()+"'";
        s.executeUpdate(sql);
             s.close();
             JOptionPane.showMessageDialog(null, "Data Berhasil Diedit");
