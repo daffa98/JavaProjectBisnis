@@ -81,3 +81,16 @@ private void SetTabel(){
         temail.setText("");
         talm.setText("");
     }
+    private void SimpanData(){
+        try {
+            String sql="Insert into supplier Values('"+tkd_sup.getText()+"','"+tnm_per.getText()+"','"+tnm_pen.getText()+"','"+tno_telp.getText()+"','"+temail.getText()+"','"+talm.getText()+"')";
+            s.executeUpdate(sql);
+            s.close();
+            JOptionPane.showMessageDialog(null, "Data Berhasil Ditambah");
+            BersihField();
+            BacaTabelSupplier();
+            
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }
