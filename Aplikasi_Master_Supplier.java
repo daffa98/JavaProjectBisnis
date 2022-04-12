@@ -63,3 +63,12 @@ private void BacaTabelSupplier(){
                 JOptionPane.showMessageDialog(null, e);
             }
         }
+private void SetTabel(){
+        int row=tbl_sup.getSelectedRow();
+        tkd_sup.setText((String)tbl_sup.getValueAt(row, 0));
+        tnm_per.setText((String)tbl_sup.getValueAt(row, 1));
+        tnm_pen.setText((String)tbl_sup.getValueAt(row, 2));
+        tno_telp.setText((String)tbl_sup.getValueAt(row, 3));
+        temail.setText((String)tbl_sup.getValueAt(row, 4));
+        talm.setText((String)tbl_sup.getValueAt(row, 5));  
+    }
