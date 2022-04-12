@@ -33,6 +33,7 @@ private void BukaKoneksi(){
             } catch (Exception e) {
             System.out.println(e);
             }
+    
         }
 
 private void BacaTabelSupplier(){
@@ -71,4 +72,12 @@ private void SetTabel(){
         tno_telp.setText((String)tbl_sup.getValueAt(row, 3));
         temail.setText((String)tbl_sup.getValueAt(row, 4));
         talm.setText((String)tbl_sup.getValueAt(row, 5));  
+    }
+    private void BersihField(){
+        tkd_sup.setText("");
+        tnm_per.setText("");
+        tnm_pen.setText("");
+        tno_telp.setText("");
+        temail.setText("");
+        talm.setText("");
     }
